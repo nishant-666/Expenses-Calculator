@@ -1,0 +1,22 @@
+{
+  "files": {
+    "main.css": "/Expenses-Calculator/static/css/main.1abc867d.chunk.css",
+    "main.js": "/Expenses-Calculator/static/js/main.91dfb1d8.chunk.js",
+    "main.js.map": "/Expenses-Calculator/static/js/main.91dfb1d8.chunk.js.map",
+    "runtime-main.js": "/Expenses-Calculator/static/js/runtime-main.465114bd.js",
+    "runtime-main.js.map": "/Expenses-Calculator/static/js/runtime-main.465114bd.js.map",
+    "static/js/2.c166ff5e.chunk.js": "/Expenses-Calculator/static/js/2.c166ff5e.chunk.js",
+    "static/js/2.c166ff5e.chunk.js.map": "/Expenses-Calculator/static/js/2.c166ff5e.chunk.js.map",
+    "index.html": "/Expenses-Calculator/index.html",
+    "precache-manifest.fd8294ac48c576b8fe5675324b5d8069.js": "/Expenses-Calculator/precache-manifest.fd8294ac48c576b8fe5675324b5d8069.js",
+    "service-worker.js": "/Expenses-Calculator/service-worker.js",
+    "static/css/main.1abc867d.chunk.css.map": "/Expenses-Calculator/static/css/main.1abc867d.chunk.css.map",
+    "static/js/2.c166ff5e.chunk.js.LICENSE.txt": "/Expenses-Calculator/static/js/2.c166ff5e.chunk.js.LICENSE.txt"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.465114bd.js",
+    "static/js/2.c166ff5e.chunk.js",
+    "static/css/main.1abc867d.chunk.css",
+    "static/js/main.91dfb1d8.chunk.js"
+  ]
+}
