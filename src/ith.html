@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html class="js-focus-visible gr__reactnative_dev" lang="en"><head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8"><style>#back-to-top{background:#000;-webkit-border-radius:50%;-moz-border-radius:50%;border-radius:50%;bottom:20px;-webkit-box-shadow:0 2px 5px 0 rgba(0,0,0,.26);-moz-box-shadow:0 2px 5px 0 rgba(0,0,0,.26);box-shadow:0 2px 5px 0 rgba(0,0,0,.26);color:#fff;cursor:pointer;display:block;height:56px;opacity:1;outline:0;position:fixed;right:20px;-webkit-tap-highlight-color:transparent;-webkit-touch-callout:none;-webkit-transition:bottom .2s,opacity .2s;-o-transition:bottom .2s,opacity .2s;-moz-transition:bottom .2s,opacity .2s;transition:bottom .2s,opacity .2s;-webkit-user-select:none;-moz-user-select:none;-ms-user-select:none;user-select:none;width:56px;z-index:100}#back-to-top svg{display:block;fill:currentColor;height:24px;margin:16px auto 0;width:24px}#back-to-top.hidden{bottom:-56px;opacity:0}</style><meta charset="utf-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><title>DrawerLayoutAndroid · React Native</title><meta name="viewport" content="width=device-width"><meta name="generator" content="Docusaurus"><meta name="description" content="React component that wraps the platform `DrawerLayout` (Android only). The Drawer (typically used for navigation) is rendered with `renderNavigationView` and direct children are the main view (where your content goes). The navigation view is initially not visible on the screen, but can be pulled in from the side of the window specified by the `drawerPosition` prop and its width can be set by the `drawerWidth` prop."><meta name="docsearch:version" content="0.62"><meta name="docsearch:language" content="en"><meta property="og:title" content="DrawerLayoutAndroid · React Native"><meta property="og:type" content="website"><meta property="og:url" content="https://reactnative.dev/"><meta property="og:description" content="React component that wraps the platform `DrawerLayout` (Android only). The Drawer (typically used for navigation) is rendered with `renderNavigationView` and direct children are the main view (where your content goes). The navigation view is initially not visible on the screen, but can be pulled in from the side of the window specified by the `drawerPosition` prop and its width can be set by the `drawerWidth` prop."><meta property="og:image" content="https://reactnative.dev/img/logo-og.png"><meta name="twitter:card" content="summary"><meta name="twitter:image" content="https://reactnative.dev/img/logo-og.png"><link rel="shortcut icon" href="https://reactnative.dev/img/favicon.ico"><link rel="stylesheet" href="ith_files/docsearch.css"><link rel="stylesheet" href="ith_files/solarized-dark.css"><link rel="alternate" type="application/atom+xml" href="https://reactnative.dev/blog/atom.xml" title="React Native Blog ATOM Feed"><link rel="alternate" type="application/rss+xml" href="https://reactnative.dev/blog/feed.xml" title="React Native Blog RSS Feed"><script id="twitter-wjs" src="ith_files/widgets.js"></script><script id="facebook-jssdk" src="ith_files/sdk.js"></script><script async="" src="ith_files/analytics.js"></script><script>
+              (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+              (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+              m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+              })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+              ga('create', 'UA-41298772-2', 'auto');
+              ga('send', 'pageview');
+            </script><script type="text/javascript" src="ith_files/focus-visible.js"></script><script type="text/javascript" src="ith_files/embed.js"></script><script type="text/javascript" src="ith_files/widgets.js"></script><script type="text/javascript" src="ith_files/buttons.js"></script><script type="text/javascript" src="ith_files/codeblocks.js"></script><script type="text/javascript" src="ith_files/tabs.js"></script><script type="text/javascript" src="ith_files/docs-rating.js"></script><script src="ith_files/vanilla-back-to-top.js"></script><script>
+        document.addEventListener('DOMContentLoaded', function() {
+          addBackToTop(
+            {"zIndex":100}
+          )
+        });
+        </script><script src="ith_files/scrollSpy.js"></script><link rel="stylesheet" href="ith_files/prism.css"><link rel="stylesheet" href="ith_files/main.css"><script src="ith_files/codetabs.js"></script></head><body class="sideNavVisible separateOnPageNav" data-gr-c-s-loaded="true"><div class="fixedHeaderContainer"><div class="headerWrapper wrapper"><header><a href="https://reactnative.dev/"><img class="logo" src="ith_files/header_logo.svg" alt="React Native"><h2 class="headerTitleWithLogo">React Native</h2></a><a href="https://reactnative.dev/versions"><h3>0.62</h3></a><div class="navigationWrapper navigationSlider"><nav class="slidingNav"><ul class="nav-site nav-site-internal"><li class=""><a href="https://reactnative.dev/docs/getting-started" target="_self">Docs</a></li><li class="siteNavGroupActive"><a href="https://reactnative.dev/docs/activityindicator" target="_self">API</a></li><li class=""><a href="https://reactnative.dev/help" target="_self">Community</a></li><li class=""><a href="https://reactnative.dev/blog/" target="_self">Blog</a></li><li class="navSearchWrapper reactNavSearchWrapper"><span class="algolia-autocomplete" style="position: relative; display: inline-block; direction: ltr;"><input type="text" id="search_input_react" placeholder="Search" title="Search" class="aa-input" autocomplete="off" spellcheck="false" role="combobox" aria-autocomplete="list" aria-expanded="false" aria-labelledby="search_input_react" aria-owns="algolia-autocomplete-listbox-0" style="position: relative; vertical-align: top;" dir="auto"><pre aria-hidden="true" style="position: absolute; visibility: hidden; white-space: pre; font-family: MS Shell Dlg \32 ; font-size: 14px; font-style: normal; font-variant: normal; font-weight: 300; word-spacing: 0px; letter-spacing: normal; text-indent: 0px; text-rendering: optimizelegibility; text-transform: none;"></pre><span class="aa-dropdown-menu" style="position: absolute; top: 100%; z-index: 100; display: none; left: 0px; right: auto;" role="listbox" id="algolia-autocomplete-listbox-0"><div class="aa-dataset-1"></div></span></span></li><li class=""><a href="https://github.com/facebook/react-native" target="_self">GitHub</a></li></ul></nav></div></header></div></div><div class="navPusher"><div class="docMainWrapper wrapper"><div class="docsNavContainer" id="docsNav"><nav class="toc"><div class="toggleNav"><section class="navWrapper wrapper"><div class="navBreadcrumb wrapper"><div class="navToggle" id="navToggler"><div class="hamburger-menu"><div class="line1"></div><div class="line2"></div><div class="line3"></div></div></div><h2><i>›</i><span>Android Components</span></h2><div class="tocToggler" id="tocToggler"><i class="icon-toc"></i></div></div><div class="navGroups"><div class="navGroup"><h3 class="navGroupCategoryTitle collapsible">Core Components<span class="arrow rotate"><svg width="24" height="24" viewBox="0 0 24 24"><path fill="#565656" d="M7.41 15.41L12 10.83l4.59 4.58L18 14l-6-6-6 6z"></path><path d="M0 0h24v24H0z" fill="none"></path></svg></span></h3><ul class=""><li class="navListItem"><a class="navItem" href="https://reactnative.dev/docs/components-and-apis">Core Components and APIs</a></li><li class="navListItem"><a class="navItem" href="https://reactnative.dev/docs/activityindicator">ActivityIndicator</a></li><li class="navListItem"><a class="navItem" href="https://reactnative.dev/docs/button">Button</a></li><li class="navListItem"><a class="navItem" href="https://reactnative.dev/docs/flatlist">FlatList</a></li><li class="navListItem"><a class="navItem" href="https://reactnative.dev/docs/image">Image</a></li><li class="navListItem"><a class="navItem" href="https://reactnative.dev/docs/imagebackground">ImageBackground</a></li><li class="navListItem"><a class="navItem" href="https://reactnative.dev/docs/keyboardavoidingview">KeyboardAvoidingView</a></li><li class="navListItem"><a class="navItem" href="https://reactnative.dev/docs/modal">Modal</a></li><li class="navListItem"><a class="navItem" href="https://reactnative.dev/docs/refreshcontrol">RefreshControl</a></li><li class="navListItem"><a class="navItem" href="https://reactnative.dev/docs/safeareaview">SafeAreaView</a></li><li class="navListItem"><a class="navItem" href="https://reactnative.dev/docs/scrollview">ScrollView</a></li><li class="navListItem"><a class="navItem" href="https://reactnative.dev/docs/sectionlist">SectionList</a></li><li class="navListItem"><a class="navItem" href="https://reactnative.dev/docs/statusbar">StatusBar</a></li><li class="navListItem"><a class="navItem" href="https://reactnative.dev/docs/switch">Switch</a></li><li class="navListItem"><a class="navItem" href="https://reactnative.dev/docs/text">Text</a></li><li class="navListItem"><a class="navItem" href="https://reactnative.dev/docs/textinput">TextInput</a></li><li class="navListItem"><a class="navItem" href="https://reactnative.dev/docs/touchablehighlight">TouchableHighlight</a></li><li class="navListItem"><a class="navItem" href="https://reactnative.dev/docs/touchableopacity">TouchableOpacity</a></li><li class="navListItem"><a class="navItem" href="https://reactnative.dev/docs/touchablewithoutfeedback">TouchableWithoutFeedback</a></li><li class="navListItem"><a class="navItem" href="https://reactnative.dev/docs/view">View</a></li><li class="navListItem"><a class="navItem" href="https://reactnative.dev/docs/virtualizedlist">VirtualizedList</a></li><div class="navGroup subNavGroup"><h4 class="navGroupSubcategoryTitle">Android Components</h4><ul><li class="navListItem navListItemActive"><a class="navItem" href="https://reactnative.dev/docs/drawerlayoutandroid">DrawerLayoutAndroid</a></li><li class="navListItem"><a class="navItem" href="https://reactnative.dev/docs/touchablenativefeedback">TouchableNativeFeedback</a></li></ul></div><div class="navGroup subNavGroup"><h4 class="navGroupSubcategoryTitle">iOS Components</h4><ul><li class="navListItem"><a class="navItem" href="https://reactnative.dev/docs/inputaccessoryview">InputAccessoryView</a></li></ul></div></ul></div><div class="navGroup"><h3 class="navGroupCategoryTitle collapsible">Props<span class="arrow"><svg width="24" height="24" viewBox="0 0 24 24"><path fill="#565656" d="M7.41 15.41L12 10.83l4.59 4.58L18 14l-6-6-6 6z"></path><path d="M0 0h24v24H0z" fill="none"></path></svg></span></h3><ul class="hide"><li class="navListItem"><a class="navItem" href="https://reactnative.dev/docs/image-style-props">Image Style Props</a></li><li class="navListItem"><a class="navItem" href="https://reactnative.dev/docs/layout-props">Layout Props</a></li><li class="navListItem"><a class="navItem" href="https://reactnative.dev/docs/shadow-props">Shadow Props</a></li><li class="navListItem"><a class="navItem" href="https://reactnative.dev/docs/text-style-props">Text Style Props</a></li><li class="navListItem"><a class="navItem" href="https://reactnative.dev/docs/view-style-props">View Style Props</a></li></ul></div><div class="navGroup"><h3 class="navGroupCategoryTitle collapsible">APIs<span class="arrow"><svg width="24" height="24" viewBox="0 0 24 24"><path fill="#565656" d="M7.41 15.41L12 10.83l4.59 4.58L18 14l-6-6-6 6z"></path><path d="M0 0h24v24H0z" fill="none"></path></svg></span></h3><ul class="hide"><li class="navListItem"><a class="navItem" href="https://reactnative.dev/docs/accessibilityinfo">AccessibilityInfo</a></li><li class="navListItem"><a class="navItem" href="https://reactnative.dev/docs/alert">Alert</a></li><li class="navListItem"><a class="navItem" href="https://reactnative.dev/docs/animated">Animated</a></li><li class="navListItem"><a class="navItem" href="https://reactnative.dev/docs/appearance">Appearance</a></li><li class="navListItem"><a class="navItem" href="https://reactnative.dev/docs/appregistry">AppRegistry</a></li><li class="navListItem"><a class="navItem" href="https://reactnative.dev/docs/appstate">AppState</a></li><li class="navListItem"><a class="navItem" href="https://reactnative.dev/docs/devsettings">DevSettings</a></li><li class="navListItem"><a class="navItem" href="https://reactnative.dev/docs/dimensions">Dimensions</a></li><li class="navListItem"><a class="navItem" href="https://reactnative.dev/docs/easing">Easing</a></li><li class="navListItem"><a class="navItem" href="https://reactnative.dev/docs/interactionmanager">InteractionManager</a></li><li class="navListItem"><a class="navItem" href="https://reactnative.dev/docs/keyboard">Keyboard</a></li><li class="navListItem"><a class="navItem" href="https://reactnative.dev/docs/layoutanimation">LayoutAnimation</a></li><li class="navListItem"><a class="navItem" href="https://reactnative.dev/docs/linking">Linking</a></li><li class="navListItem"><a class="navItem" href="https://reactnative.dev/docs/panresponder">PanResponder</a></li><li class="navListItem"><a class="navItem" href="https://reactnative.dev/docs/pixelratio">PixelRatio</a></li><li class="navListItem"><a class="navItem" href="https://reactnative.dev/docs/share">Share</a></li><li class="navListItem"><a class="navItem" href="https://reactnative.dev/docs/stylesheet">StyleSheet</a></li><li class="navListItem"><a class="navItem" href="https://reactnative.dev/docs/systrace">Systrace</a></li><li class="navListItem"><a class="navItem" href="https://reactnative.dev/docs/transforms">Transforms</a></li><li class="navListItem"><a class="navItem" href="https://reactnative.dev/docs/vibration">Vibration</a></li><div class="navGroup subNavGroup"><h4 class="navGroupSubcategoryTitle">Hooks</h4><ul><li class="navListItem"><a class="navItem" href="https://reactnative.dev/docs/usecolorscheme">useColorScheme</a></li><li class="navListItem"><a class="navItem" href="https://reactnative.dev/docs/usewindowdimensions">useWindowDimensions</a></li></ul></div><div class="navGroup subNavGroup"><h4 class="navGroupSubcategoryTitle">Android APIs</h4><ul><li class="navListItem"><a class="navItem" href="https://reactnative.dev/docs/backhandler">BackHandler</a></li><li class="navListItem"><a class="navItem" href="https://reactnative.dev/docs/permissionsandroid">PermissionsAndroid</a></li><li class="navListItem"><a class="navItem" href="https://reactnative.dev/docs/toastandroid">ToastAndroid</a></li></ul></div><div class="navGroup subNavGroup"><h4 class="navGroupSubcategoryTitle">iOS APIs</h4><ul><li class="navListItem"><a class="navItem" href="https://reactnative.dev/docs/actionsheetios">ActionSheetIOS</a></li><li class="navListItem"><a class="navItem" href="https://reactnative.dev/docs/settings">Settings</a></li></ul></div></ul></div></div></section></div><script>
+            var coll = document.getElementsByClassName('collapsible');
+            var checkActiveCategory = true;
+            for (var i = 0; i < coll.length; i++) {
+              var links = coll[i].nextElementSibling.getElementsByTagName('*');
+              if (checkActiveCategory){
+                for (var j = 0; j < links.length; j++) {
+                  if (links[j].classList.contains('navListItemActive')){
+                    coll[i].nextElementSibling.classList.toggle('hide');
+                    coll[i].childNodes[1].classList.toggle('rotate');
+                    checkActiveCategory = false;
+                    break;
+                  }
+                }
+              }
+
+              coll[i].addEventListener('click', function() {
+                var arrow = this.childNodes[1];
+                arrow.classList.toggle('rotate');
+                var content = this.nextElementSibling;
+                content.classList.toggle('hide');
+              });
+            }
+
+            document.addEventListener('DOMContentLoaded', function() {
+              createToggler('#navToggler', '#docsNav', 'docsSliderActive');
+              createToggler('#tocToggler', 'body', 'tocActive');
+
+              var headings = document.querySelector('.toc-headings');
+              headings && headings.addEventListener('click', function(event) {
+                var el = event.target;
+                while(el !== headings){
+                  if (el.tagName === 'A') {
+                    document.body.classList.remove('tocActive');
+                    break;
+                  } else{
+                    el = el.parentNode;
+                  }
+                }
+              }, false);
+
+              function createToggler(togglerSelector, targetSelector, className) {
+                var toggler = document.querySelector(togglerSelector);
+                var target = document.querySelector(targetSelector);
+
+                if (!toggler) {
+                  return;
+                }
+
+                toggler.onclick = function(event) {
+                  event.preventDefault();
+
+                  target.classList.toggle(className);
+                };
+              }
+            });
+        </script></nav></div><div class="container mainContainer docsContainer"><div class="wrapper"><div class="post"><header class="postHeader"><a class="edit-page-link button" href="https://github.com/facebook/react-native-website/blob/master/docs/drawerlayoutandroid.md" target="_blank" rel="noreferrer noopener">Edit</a><h1 id="__docusaurus" class="postHeaderTitle">DrawerLayoutAndroid</h1></header><article><div><span><p>React component that wraps the platform <code>DrawerLayout</code> (Android only). The Drawer (typically used for navigation) is rendered with <code>renderNavigationView</code>
+ and direct children are the main view (where your content goes). The 
+navigation view is initially not visible on the screen, but can be 
+pulled in from the side of the window specified by the <code>drawerPosition</code> prop and its width can be set by the <code>drawerWidth</code> prop.</p>
+<h2><a class="anchor" aria-hidden="true" id="example"></a><a href="#example" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Example</h2>
+<div class="snack-player"><div class="desktop-friendly-snack" style="margin-top: 15px; margin-bottom: 15px"><div data-snack-name="DrawerLayoutAndroid Component Example" data-snack-description="Example usage" data-snack-code="import%20React%2C%20%7B%20useState%20%7D%20from%20%22react%22%3B%0Aimport%20%7B%20Button%2C%20DrawerLayoutAndroid%2C%20Text%2C%20StyleSheet%2C%20View%20%7D%20from%20%22react-native%22%3B%0A%0Aconst%20App%20%3D%20()%20%3D%3E%20%7B%0A%20%20const%20%5BdrawerPosition%2C%20setDrawerPosition%5D%20%3D%20useState(%22left%22)%3B%0A%20%20const%20changeDrawerPosition%20%3D%20()%20%3D%3E%20%7B%0A%20%20%20%20if%20(drawerPosition%20%3D%3D%3D%20%22left%22)%20%7B%0A%20%20%20%20%20%20setDrawerPosition(%22right%22)%3B%0A%20%20%20%20%7D%20else%20%7B%0A%20%20%20%20%20%20setDrawerPosition(%22left%22)%3B%0A%20%20%20%20%7D%0A%20%20%7D%3B%0A%0A%20%20const%20navigationView%20%3D%20(%0A%20%20%20%20%3CView%20style%3D%7Bstyles.navigationContainer%7D%3E%0A%20%20%20%20%20%20%3CText%20style%3D%7B%7B%20margin%3A%2010%2C%20fontSize%3A%2015%20%7D%7D%3EI'm%20in%20the%20Drawer!%3C%2FText%3E%0A%20%20%20%20%3C%2FView%3E%0A%20%20)%3B%0A%0A%20%20return%20(%0A%20%20%20%20%3CDrawerLayoutAndroid%0A%20%20%20%20%20%20drawerWidth%3D%7B300%7D%0A%20%20%20%20%20%20drawerPosition%3D%7BdrawerPosition%7D%0A%20%20%20%20%20%20renderNavigationView%3D%7B()%20%3D%3E%20navigationView%7D%0A%20%20%20%20%3E%0A%20%20%20%20%20%20%3CView%20style%3D%7Bstyles.container%7D%3E%0A%20%20%20%20%20%20%20%20%3CText%20style%3D%7B%7B%20margin%3A%2010%2C%20fontSize%3A%2015%20%7D%7D%3E%0A%20%20%20%20%20%20%20%20%20%20DrawerLayoutAndroid%20example%0A%20%20%20%20%20%20%20%20%3C%2FText%3E%0A%20%20%20%20%20%20%20%20%3CButton%0A%20%20%20%20%20%20%20%20%20%20title%3D%22Change%20Drawer%20Position%22%0A%20%20%20%20%20%20%20%20%20%20onPress%3D%7B()%20%3D%3E%20changeDrawerPosition()%7D%0A%20%20%20%20%20%20%20%20%2F%3E%0A%20%20%20%20%20%20%20%20%3CText%20style%3D%7B%7B%20margin%3A%2010%2C%20fontSize%3A%2015%20%7D%7D%3E%0A%20%20%20%20%20%20%20%20%20%20Drawer%20on%20the%20%7BdrawerPosition%7D!%20Swipe%20from%20the%20side%20to%20see!%0A%20%20%20%20%20%20%20%20%3C%2FText%3E%0A%20%20%20%20%20%20%3C%2FView%3E%0A%20%20%20%20%3C%2FDrawerLayoutAndroid%3E%0A%20%20)%3B%0A%7D%3B%0A%0Aconst%20styles%20%3D%20StyleSheet.create(%7B%0A%20%20container%3A%20%7B%0A%20%20%20%20flex%3A%201%2C%0A%20%20%20%20alignItems%3A%20%22center%22%2C%0A%20%20%20%20justifyContent%3A%20%22center%22%2C%0A%20%20%20%20paddingTop%3A%20%2250px%22%2C%0A%20%20%20%20backgroundColor%3A%20%22%23ecf0f1%22%2C%0A%20%20%20%20padding%3A%208%0A%20%20%7D%2C%0A%20%20navigationContainer%3A%20%7B%0A%20%20%20%20flex%3A%201%2C%0A%20%20%20%20paddingTop%3A%20%20%2250px%22%2C%0A%20%20%20%20backgroundColor%3A%20%22%23fff%22%2C%0A%20%20%20%20padding%3A%208%0A%20%20%7D%0A%7D)%3B%0A%0Aexport%20default%20App%3B%0A" data-snack-platform="web" data-snack-supported-platforms="android" data-snack-preview="true" style="
+          overflow: hidden;
+          background: #fafafa;
+          border: 1px solid rgba(0,0,0,.16);
+          border-radius: 4px;
+          height: 514px;
+          width: 100%;
+        "><iframe src="ith_files/embedded.html" style="display: block;" data-snack-iframe="true" width="100%" height="100%" frameborder="0"></iframe></div></div></div><hr>
+<h1><a class="anchor" aria-hidden="true" id="reference"></a><a href="#reference" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Reference</h1>
+<h2><a class="anchor" aria-hidden="true" id="props"></a><a href="#props" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Props</h2>
+<p>Inherits <a href="https://reactnative.dev/docs/view#props">View Props</a>.</p>
+<h3><a class="anchor" aria-hidden="true" id="drawerbackgroundcolor"></a><a href="#drawerbackgroundcolor" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a><code>drawerBackgroundColor</code></h3>
+<p>Specifies the background color of the drawer. The default value is <code>white</code>. If you want to set the opacity of the drawer, use rgba. Example:</p>
+<pre><code class="hljs css language-jsx"><span class="token keyword">return</span> <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span><span class="token class-name">DrawerLayoutAndroid</span></span> <span class="token attr-name">drawerBackgroundColor</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>rgba(0,0,0,0.5)<span class="token punctuation">"</span></span> <span class="token punctuation">/&gt;</span></span><span class="token punctuation">;</span>
+</code></pre>
+<table>
+<thead>
+<tr><th>Type</th><th>Required</th></tr>
+</thead>
+<tbody>
+<tr><td><a href="https://reactnative.dev/docs/colors">color</a></td><td>No</td></tr>
+</tbody>
+</table>
+<hr>
+<h3><a class="anchor" aria-hidden="true" id="drawerlockmode"></a><a href="#drawerlockmode" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a><code>drawerLockMode</code></h3>
+<p>Specifies the lock mode of the drawer. The drawer can be locked in 3 states:</p>
+<ul>
+<li>unlocked (default), meaning that the drawer will respond (open/close) to touch gestures.</li>
+<li>locked-closed, meaning that the drawer will stay closed and not respond to gestures.</li>
+<li>locked-open, meaning that the drawer will stay opened and not 
+respond to gestures. The drawer may still be opened and closed 
+programmatically (<code>openDrawer</code>/<code>closeDrawer</code>).</li>
+</ul>
+<table>
+<thead>
+<tr><th>Type</th><th>Required</th></tr>
+</thead>
+<tbody>
+<tr><td>enum('unlocked', 'locked-closed', 'locked-open')</td><td>No</td></tr>
+</tbody>
+</table>
+<hr>
+<h3><a class="anchor" aria-hidden="true" id="drawerposition"></a><a href="#drawerposition" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a><code>drawerPosition</code></h3>
+<p>Specifies the side of the screen from which the drawer will slide in. By default it is set to <code>left</code>.</p>
+<table>
+<thead>
+<tr><th>Type</th><th>Required</th></tr>
+</thead>
+<tbody>
+<tr><td>enum('left', 'right')</td><td>No</td></tr>
+</tbody>
+</table>
+<hr>
+<h3><a class="anchor" aria-hidden="true" id="drawerwidth"></a><a href="#drawerwidth" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a><code>drawerWidth</code></h3>
+<p>Specifies the width of the drawer, more precisely the width of the view that be pulled in from the edge of the window.</p>
+<table>
+<thead>
+<tr><th>Type</th><th>Required</th></tr>
+</thead>
+<tbody>
+<tr><td>number</td><td>No</td></tr>
+</tbody>
+</table>
+<hr>
+<h3><a class="anchor" aria-hidden="true" id="keyboarddismissmode"></a><a href="#keyboarddismissmode" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a><code>keyboardDismissMode</code></h3>
+<p>Determines whether the keyboard gets dismissed in response to a drag.</p>
+<ul>
+<li>'none' (the default), drags do not dismiss the keyboard.</li>
+<li>'on-drag', the keyboard is dismissed when a drag begins.</li>
+</ul>
+<table>
+<thead>
+<tr><th>Type</th><th>Required</th></tr>
+</thead>
+<tbody>
+<tr><td>enum('none', 'on-drag')</td><td>No</td></tr>
+</tbody>
+</table>
+<hr>
+<h3><a class="anchor" aria-hidden="true" id="ondrawerclose"></a><a href="#ondrawerclose" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a><code>onDrawerClose</code></h3>
+<p>Function called whenever the navigation view has been closed.</p>
+<table>
+<thead>
+<tr><th>Type</th><th>Required</th></tr>
+</thead>
+<tbody>
+<tr><td>function</td><td>No</td></tr>
+</tbody>
+</table>
+<hr>
+<h3><a class="anchor" aria-hidden="true" id="ondraweropen"></a><a href="#ondraweropen" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a><code>onDrawerOpen</code></h3>
+<p>Function called whenever the navigation view has been opened.</p>
+<table>
+<thead>
+<tr><th>Type</th><th>Required</th></tr>
+</thead>
+<tbody>
+<tr><td>function</td><td>No</td></tr>
+</tbody>
+</table>
+<hr>
+<h3><a class="anchor" aria-hidden="true" id="ondrawerslide"></a><a href="#ondrawerslide" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a><code>onDrawerSlide</code></h3>
+<p>Function called whenever there is an interaction with the navigation view.</p>
+<table>
+<thead>
+<tr><th>Type</th><th>Required</th></tr>
+</thead>
+<tbody>
+<tr><td>function</td><td>No</td></tr>
+</tbody>
+</table>
+<hr>
+<h3><a class="anchor" aria-hidden="true" id="ondrawerstatechanged"></a><a href="#ondrawerstatechanged" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a><code>onDrawerStateChanged</code></h3>
+<p>Function called when the drawer state has changed. The drawer can be in 3 states:</p>
+<ul>
+<li>idle, meaning there is no interaction with the navigation view happening at the time</li>
+<li>dragging, meaning there is currently an interaction with the navigation view</li>
+<li>settling, meaning that there was an interaction with the navigation 
+view, and the navigation view is now finishing its closing or opening 
+animation</li>
+</ul>
+<table>
+<thead>
+<tr><th>Type</th><th>Required</th></tr>
+</thead>
+<tbody>
+<tr><td>function</td><td>No</td></tr>
+</tbody>
+</table>
+<hr>
+<h3><a class="anchor" aria-hidden="true" id="rendernavigationview"></a><a href="#rendernavigationview" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a><code>renderNavigationView</code></h3>
+<p>The navigation view that will be rendered to the side of the screen and can be pulled in.</p>
+<table>
+<thead>
+<tr><th>Type</th><th>Required</th></tr>
+</thead>
+<tbody>
+<tr><td>function</td><td>Yes</td></tr>
+</tbody>
+</table>
+<hr>
+<h3><a class="anchor" aria-hidden="true" id="statusbarbackgroundcolor"></a><a href="#statusbarbackgroundcolor" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a><code>statusBarBackgroundColor</code></h3>
+<p>Make the drawer take the entire screen and draw the background of the
+ status bar to allow it to open over the status bar. It will only have 
+an effect on API 21+.</p>
+<table>
+<thead>
+<tr><th>Type</th><th>Required</th></tr>
+</thead>
+<tbody>
+<tr><td><a href="https://reactnative.dev/docs/colors">color</a></td><td>No</td></tr>
+</tbody>
+</table>
+<h2><a class="anchor" aria-hidden="true" id="methods"></a><a href="#methods" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Methods</h2>
+<h3><a class="anchor" aria-hidden="true" id="closedrawer"></a><a href="#closedrawer" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a><code>closeDrawer()</code></h3>
+<pre><code class="hljs css language-jsx"><span class="token function">closeDrawer</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+</code></pre>
+<p>Closes the drawer.</p>
+<hr>
+<h3><a class="anchor" aria-hidden="true" id="opendrawer"></a><a href="#opendrawer" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a><code>openDrawer()</code></h3>
+<pre><code class="hljs css language-jsx"><span class="token function">openDrawer</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+</code></pre>
+<p>Opens the drawer.</p>
+</span></div></article><div class="docs-rating_container">
+                Is this page useful?
+                <svg class="i_thumbsup" alt="Like" onclick="giveFeedback(1)" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 81.13 89.76"><path d="M22.9 6a18.57 18.57 0 002.67 8.4 25.72 25.72 0 008.65 7.66c3.86 2 8.67 7.13 13.51 11 3.86 3.11 8.57 7.11 11.54 8.45s13.59.26 14.64 1.17c1.88 1.63 1.55 9-.11 15.25-1.61 5.86-5.96 10.55-6.48 16.86-.4 4.83-2.7 4.88-10.93 4.88h-1.35c-3.82 0-8.24 2.93-12.92 3.62a68 68 0 01-9.73.5c-3.57 0-7.86-.08-13.25-.08-3.56 0-4.71-1.83-4.71-4.48h8.42a3.51 3.51 0 000-7H12.28a2.89 2.89 0 01-2.88-2.88 1.91 1.91 0 01.77-1.78h16.46a3.51 3.51 0 000-7H12.29c-3.21 0-4.84-1.83-4.84-4a6.41 6.41 0 011.17-3.78h19.06a3.5 3.5 0 100-7H9.75A3.51 3.51 0 016 42.27a3.45 3.45 0 013.75-3.48h13.11c5.61 0 7.71-3 5.71-5.52-4.43-4.74-10.84-12.62-11-18.71-.15-6.51 2.6-7.83 5.36-8.56m0-6a6.18 6.18 0 00-1.53.2c-6.69 1.77-10 6.65-9.82 14.5.08 5.09 2.99 11.18 8.52 18.09H9.74a9.52 9.52 0 00-6.23 16.9 12.52 12.52 0 00-2.07 6.84 9.64 9.64 0 003.65 7.7 7.85 7.85 0 00-1.7 5.13 8.9 8.9 0 005.3 8.13 6 6 0 00-.26 1.76c0 6.37 4.2 10.48 10.71 10.48h13.25a73.75 73.75 0 0010.6-.56 35.89 35.89 0 007.58-2.18 17.83 17.83 0 014.48-1.34h1.35c4.69 0 7.79 0 10.5-1 3.85-1.44 6-4.59 6.41-9.38.2-2.46 1.42-4.85 2.84-7.62a41.3 41.3 0 003.42-8.13 48 48 0 001.59-10.79c.1-5.13-1-8.48-3.35-10.55-2.16-1.87-4.64-1.87-9.6-1.88a46.86 46.86 0 01-6.64-.29c-1.92-.94-5.72-4-8.51-6.3l-1.58-1.28c-1.6-1.3-3.27-2.79-4.87-4.23-3.33-3-6.47-5.79-9.61-7.45a20.2 20.2 0 01-6.43-5.53 12.44 12.44 0 01-1.72-5.36 6 6 0 00-6-5.86z"></path></svg>
+                <svg class="i_thumbsdown" alt="Dislike" onclick="giveFeedback(0)" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 81.13 89.76"><path d="M22.9 6a18.57 18.57 0 002.67 8.4 25.72 25.72 0 008.65 7.66c3.86 2 8.67 7.13 13.51 11 3.86 3.11 8.57 7.11 11.54 8.45s13.59.26 14.64 1.17c1.88 1.63 1.55 9-.11 15.25-1.61 5.86-5.96 10.55-6.48 16.86-.4 4.83-2.7 4.88-10.93 4.88h-1.35c-3.82 0-8.24 2.93-12.92 3.62a68 68 0 01-9.73.5c-3.57 0-7.86-.08-13.25-.08-3.56 0-4.71-1.83-4.71-4.48h8.42a3.51 3.51 0 000-7H12.28a2.89 2.89 0 01-2.88-2.88 1.91 1.91 0 01.77-1.78h16.46a3.51 3.51 0 000-7H12.29c-3.21 0-4.84-1.83-4.84-4a6.41 6.41 0 011.17-3.78h19.06a3.5 3.5 0 100-7H9.75A3.51 3.51 0 016 42.27a3.45 3.45 0 013.75-3.48h13.11c5.61 0 7.71-3 5.71-5.52-4.43-4.74-10.84-12.62-11-18.71-.15-6.51 2.6-7.83 5.36-8.56m0-6a6.18 6.18 0 00-1.53.2c-6.69 1.77-10 6.65-9.82 14.5.08 5.09 2.99 11.18 8.52 18.09H9.74a9.52 9.52 0 00-6.23 16.9 12.52 12.52 0 00-2.07 6.84 9.64 9.64 0 003.65 7.7 7.85 7.85 0 00-1.7 5.13 8.9 8.9 0 005.3 8.13 6 6 0 00-.26 1.76c0 6.37 4.2 10.48 10.71 10.48h13.25a73.75 73.75 0 0010.6-.56 35.89 35.89 0 007.58-2.18 17.83 17.83 0 014.48-1.34h1.35c4.69 0 7.79 0 10.5-1 3.85-1.44 6-4.59 6.41-9.38.2-2.46 1.42-4.85 2.84-7.62a41.3 41.3 0 003.42-8.13 48 48 0 001.59-10.79c.1-5.13-1-8.48-3.35-10.55-2.16-1.87-4.64-1.87-9.6-1.88a46.86 46.86 0 01-6.64-.29c-1.92-.94-5.72-4-8.51-6.3l-1.58-1.28c-1.6-1.3-3.27-2.79-4.87-4.23-3.33-3-6.47-5.79-9.61-7.45a20.2 20.2 0 01-6.43-5.53 12.44 12.44 0 01-1.72-5.36 6 6 0 00-6-5.86z"></path></svg>
+            </div></div><div class="docs-prevnext"><a class="docs-prev button" href="https://reactnative.dev/docs/virtualizedlist"><span class="arrow-prev">← </span><span class="function-name-prevnext">VirtualizedList</span></a><a class="docs-next button" href="https://reactnative.dev/docs/touchablenativefeedback"><span class="function-name-prevnext">TouchableNativeFeedback</span><span class="arrow-next"> →</span></a></div></div></div><nav class="onPageNav"><ul class="toc-headings"><li><a href="#example" class="active">Example</a></li><li><a href="#props">Props</a><ul class="toc-headings"><li><a href="#drawerbackgroundcolor"><code>drawerBackgroundColor</code></a></li><li><a href="#drawerlockmode"><code>drawerLockMode</code></a></li><li><a href="#drawerposition"><code>drawerPosition</code></a></li><li><a href="#drawerwidth"><code>drawerWidth</code></a></li><li><a href="#keyboarddismissmode"><code>keyboardDismissMode</code></a></li><li><a href="#ondrawerclose"><code>onDrawerClose</code></a></li><li><a href="#ondraweropen"><code>onDrawerOpen</code></a></li><li><a href="#ondrawerslide"><code>onDrawerSlide</code></a></li><li><a href="#ondrawerstatechanged"><code>onDrawerStateChanged</code></a></li><li><a href="#rendernavigationview"><code>renderNavigationView</code></a></li><li><a href="#statusbarbackgroundcolor"><code>statusBarBackgroundColor</code></a></li></ul></li><li><a href="#methods">Methods</a><ul class="toc-headings"><li><a href="#closedrawer"><code>closeDrawer()</code></a></li><li><a href="#opendrawer"><code>openDrawer()</code></a></li></ul></li></ul></nav></div><footer class="nav-footer" id="footer"><section class="sitemap"><div><h5>Docs</h5><a href="https://reactnative.dev/docs/getting-started.html">Getting Started</a><a href="https://reactnative.dev/docs/tutorial.html">Tutorial</a><a href="https://reactnative.dev/docs/components-and-apis.html">Components and APIs</a><a href="https://reactnative.dev/docs/more-resources.html">More Resources</a></div><div><h5>Community</h5><a href="https://reactnative.dev/help.html">The React Native Community</a><a href="https://reactnative.dev/showcase.html">Who's using React Native?</a><a href="https://stackoverflow.com/questions/tagged/react-native" target="_blank">Ask Questions on Stack Overflow</a><a href="https://github.com/facebook/react-native/blob/master/CONTRIBUTING.md">Contributor Guide</a><a href="https://dev.to/t/reactnative" target="_blank">DEV Community</a></div><div><h5>More Resources</h5><a href="https://reactnative.dev/blog/">Blog</a><a href="https://twitter.com/reactnative" target="_blank">Twitter</a><a href="https://github.com/facebook/react-native" target="_blank">GitHub</a><a href="https://reactjs.org/" target="_blank">React</a></div></section><a href="https://code.facebook.com/projects/" target="_blank" class="fbOpenSource"><img src="ith_files/oss_logo.png" alt="Facebook Open Source" width="170" height="45"></a><section class="copyright">Copyright © 2020 Facebook Inc.</section></footer></div><script type="text/javascript" src="ith_files/docsearch.js"></script><script>window.fbAsyncInit = function() {FB.init({appId:'1677033832619985',xfbml:true,version:'v2.7'});};(function(d, s, id){var js, fjs = d.getElementsByTagName(s)[0];if (d.getElementById(id)) {return;}js = d.createElement(s); js.id = id;js.src = '//connect.facebook.net/en_US/sdk.js';fjs.parentNode.insertBefore(js, fjs);}(document, 'script','facebook-jssdk'));
+                </script><script>window.twttr=(function(d,s, id){var js,fjs=d.getElementsByTagName(s)[0],t=window.twttr||{};if(d.getElementById(id))return t;js=d.createElement(s);js.id=id;js.src='https://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js, fjs);t._e = [];t.ready = function(f) {t._e.push(f);};return t;}(document, 'script', 'twitter-wjs'));</script><script>
+                document.addEventListener('keyup', function(e) {
+                  if (e.target !== document.body) {
+                    return;
+                  }
+                  // keyCode for '/' (slash)
+                  if (e.keyCode === 191) {
+                    const search = document.getElementById('search_input_react');
+                    search && search.focus();
+                  }
+                });
+              </script><script>
+              var search = docsearch({
+                
+                apiKey: '2c98749b4a1e588efec53b2acec13025',
+                indexName: 'react-native-versions',
+                inputSelector: '#search_input_react',
+                algoliaOptions: {"facetFilters":["tags:0.62"],"hitsPerPage":5}
+              });
+            </script><iframe scrolling="no" allowtransparency="true" src="ith_files/widget_iframe.html" title="Twitter settings iframe" style="display: none;" frameborder="0"></iframe><div id="back-to-top" class="hidden"><svg viewBox="0 0 24 24"><path d="M7.41 15.41L12 10.83l4.59 4.58L18 14l-6-6-6 6z"></path></svg></div></body></html>
